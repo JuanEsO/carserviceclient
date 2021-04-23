@@ -1,0 +1,19 @@
+.ownerContainer{
+    margin-right: 2em;
+    min-width: 300px;
+}
+.ownerButton{
+    margin-top: 0%;
+}
+
+.listItem{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-width: 2px;
+    border-color: blue;
+}
+.divisor{
+    width: 100%;
+    background-color: blue;
+    height: 10px;
+}
