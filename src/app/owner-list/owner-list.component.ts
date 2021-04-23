@@ -14,11 +14,18 @@ export class OwnerListComponent implements OnInit {
 
   ngOnInit() {
     this.OwnerService.getAll().subscribe(data => {
-      console.log(data) 
       this.owners = data._embedded.owners;
       /* for (const car of this.cars) {
         
       } */
     });
   }
+
+  getOwnerId(href) {
+    this.OwnerService.search(href).subscribe(data =>{
+      console.log(data)
+    })
+  }
+
+  
 }

@@ -11,12 +11,12 @@
             <h2 mat-line> profession: {{owner.profession}}</h2>
             <h2 mat-line> name: {{owner.name}}</h2>
           </div>
-          <button mat-stroked-button color="primary" class="ownerButton" [routerLink]="['/owner-list']">See owner</button>
+          <a mat-stroked-button color="primary" class="ownerButton" [routerLink]="['/owner-edit', owner.dni]">See owner</a>
           
         </mat-list-item>
         
       </mat-list>
     </mat-card-content>
   
-    <button mat-fab color="primary" [routerLink]="['/car-add']">Add</button>
+    <button mat-fab color="primary" [routerLink]="['/owner-add']">Add</button>
   </mat-card>

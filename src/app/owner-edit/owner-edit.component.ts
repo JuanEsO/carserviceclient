@@ -19,6 +19,7 @@ export class OwnerEditComponent implements OnInit {
     private ownerService: OwnerService) {
 }
 
+
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       const id = params['id'];
@@ -36,8 +37,25 @@ export class OwnerEditComponent implements OnInit {
     });
   }
 
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
+
   gotoList() {
     this.router.navigate(['/owner-list']);
+  }
+
+  save(form: NgForm) {
+    this.ownerService.save(form).subscribe(result => {
+      this.gotoList();
+    }, error => console.error(error));
+  }
+
+  remove(href) {
+    this.ownerService.remove(href).subscribe(result => {
+      this.gotoList();
+    }, error => console.error(error));
   }
 
 }

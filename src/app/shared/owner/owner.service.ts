@@ -34,4 +34,8 @@ export class OwnerService {
     return this.http.delete(href);
   }
 
+  search(href: string): Observable<any> {
+    return this.http.get(href)
+  }
+
 }
